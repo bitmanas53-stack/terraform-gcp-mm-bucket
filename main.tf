@@ -11,7 +11,7 @@ module "mm-bucket" {
 }
 
 resource "google_storage_bucket" "bucket" {
-  name                        = var.project_id + "-" + var.bucket_name
+  name                        = "${var.project_id}-${var.bucket_name}"
   location                    = var.region
   uniform_bucket_level_access = true
   project                     = var.project_id
