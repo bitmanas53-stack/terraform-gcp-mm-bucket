@@ -5,7 +5,7 @@ provider "google" {
 module "mm-bucket" {
   source      = "app.terraform.io/ManasOrgTerraform/mm-bucket/google"
   version     = "0.0.1"
-  bucket_name = var.bucket_name
+  bucket_name = "${var.project_id}-${var.bucket_name}"
   project_id  = var.project_id
   region      = var.region
 }
