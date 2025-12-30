@@ -10,7 +10,7 @@ module "mm-bucket" {
   region      = var.region
 }
 
-module "mm-bucket" {
+module "mm-bucket-test" {
   source      = "app.terraform.io/ManasOrgTerraform/mm-bucket/google"
   version     = "0.0.1"
   bucket_name = "${var.project_id}-${var.bucket_name}-test"
