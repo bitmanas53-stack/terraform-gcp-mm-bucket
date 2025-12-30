@@ -1,7 +1,7 @@
 output "bucket_name" {
-  value = google_storage_bucket.bucket.name
+  value = module.mm_bucket.bucket_name
 }
 
 output "bucket_id" {
-  value = google_storage_bucket.bucket.id
+  value = module.mm_bucket.bucket_id
 }

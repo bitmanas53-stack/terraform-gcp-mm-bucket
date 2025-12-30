@@ -10,11 +10,12 @@ module "mm-bucket" {
   region      = var.region
 }
 
-resource "google_storage_bucket" "bucket" {
-  name                        = "${var.project_id}-${var.bucket_name}"
-  location                    = var.region
-  uniform_bucket_level_access = true
-  project                     = var.project_id
-  force_destroy               = true
-}
+## not required
+# resource "google_storage_bucket" "bucket" {
+#   name                        = "${var.project_id}-${var.bucket_name}"
+#   location                    = var.region
+#   uniform_bucket_level_access = true
+#   project                     = var.project_id
+#   force_destroy               = true
+# }
 
